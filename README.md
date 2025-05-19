@@ -12,7 +12,7 @@ Sistem Informasi Arsip Pembelian (SIAP) is a website used to store purchase reco
 ## :hammer_and_pick: Technologies used
 - Language: JavaScript
 - Database: MySQL
-- Framework: Tailwind CSS
+- Framework: ...
 
 ## :open_file_folder: Folder Structures
 - assets/
