@@ -83,6 +83,8 @@ header{
     height: 70px;
 }
 
+/* dashboard sytle section */
+
 .notif{
     width: 1084px;
     height: 84px;
@@ -130,4 +132,149 @@ header{
     height: 1px;
     margin-top: auto;
     margin-bottom: auto;
+}
+
+/* Input style section */
+
+.input-title{
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+    margin-top: 27px;
+    font-size: 24px;
+}
+
+.forms{
+    width: 1142px;
+    height: 485px;
+    background-color: #d9d9d9;
+    border-radius: 15px;
+    display: flex;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 15px;
+}
+
+.left-form{
+    display: flex;
+    flex-direction: column;
+    margin-left: 45px;
+    margin-top: 48px;
+    margin-right: 140px;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+}
+
+.input-box input{
+    width: 499px;
+    border: none;
+    border-radius: 10px;
+    height: 37px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.input-box label{
+    margin-bottom: 1px;
+    font-weight: 600;
+}
+
+.radio-label{
+    font-weight: 600;
+}
+
+.option{
+    margin-bottom: 14px;
+}
+
+.option label{
+    margin-right: 21px;
+}
+
+#payment-method{
+    border: none;
+    border-radius: 10px;
+    width: 300px;
+    height: 37px;
+    padding-left: 23px;
+    font-size: 16px;
+}
+
+.right-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.upload-box{
+    width: 375px;
+    height: 358px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border-style: dotted;
+    cursor: pointer;
+}
+
+.upload-box img{
+    width: 125px;
+    height: 125px;
+}
+
+.upload-box label{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.buttons{
+    width: 423px;
+    height: 50px;
+    margin-top: 29px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button{
+    width: 203px;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.buttons button:hover{
+
+}
+
+.cancel{
+    background-color: #E53935;
+    color: white;
+}
+
+.cancel:hover{
+    background-color: #ba312f;
+    transition: 0.3s;
+}
+
+.upload{
+    background-color: #4CAF50;
+    color: white;
+}
+
+.upload:hover{
+    background-color: #3f8f41;
+    transition: 0.3s;
 }

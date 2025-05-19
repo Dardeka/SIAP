@@ -26,7 +26,51 @@
         </div>
     </header>
     <main>
-
+        <span class="input-title">Form Unggah Data</span>
+        <div class="forms">
+            <div class="left-form">
+                <div class="input-box">
+                    <label>Nomor Surat</label>
+                    <input type="text">
+                </div>
+                <div class="input-box">
+                    <label>Nama Perusahaan</label>
+                    <input type="text">
+                </div>
+                <div class="input-box">
+                    <label>Tanggal Pembelian</label>
+                    <input type="date">
+                </div>
+                <label class="radio-label">Apakah sudah membayar?</label>
+                <div class="option">
+                    <input type="radio" id="success" name="status" value="sudah">
+                    <label for="success">Sudah</label>
+                    <input type="radio" id="pending" name="status" value="belum">
+                    <label for="pending">Belum</label>
+                </div>
+                <div class="input-box">
+                    <label>Metode Pembayaran</label>
+                    <select name="method" id="payment-method">
+                        <option value="none"><span>--- Select One Method ---</span></option>
+                        <option value="tfBCA">Transfer via BCA</option>
+                        <option value="tfBRI">Transfer via BRI</option>
+                        <option value="tfMAN">Transfer via Mandiri</option>
+                        <option value="COD">Cash on Delivery</option>
+                    </select>
+                </div>
+            </div>
+            <div class="right-form">
+                <div class="upload-box">
+                    <img src="assets/upload.png" alt="">
+                    <input type="file" name="upload" hidden>
+                    <label for="upload">Unggah nota pembelian disini<br>(.pdf)</label>
+                </div>
+                <div class="buttons">
+                    <button class="cancel">Batal</button>
+                    <button class="upload">Unggah Data</button>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 </html>
