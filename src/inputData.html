@@ -6,71 +6,103 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>SIAP - Input Data</title>
 </head>
 <body>
-    <header>
-        <div class="top-section">
-            <img id="logo" src="assets/logo-slogan.png" alt="">
-            <div class="features">
-                <a href="dashboard.html" class="button">Dashboard</a>
-                <a href="#" class="button">Unggah Data</a>
-                <a href="#" class="button">Pencarian Data</a>
+    <header class="bg-[#0077B6] h-[82px] w-auto">
+        <div class="flex flex-wrap justify-between items-center max-ml-[51px] max-mr-[41px] text-white">
+            <img class="max-w-[131px] mt-[7px] ml-[10px]" id="logo" src="assets/logo-slogan.png" alt="">
+            <div class="flex flex-wrap max-w-[411px] justify-between">
+                <a href="dashboard.html" class="bg-[#0077B6] hover:bg-[#ADB5DB] pl-[10px] pr-[10px] pt-[5px] pb-[5px] rounded-[5px]">Dashboard</a>
+                <a href="#" class="bg-[#0077B6] hover:bg-[#ADB5DB] pl-[10px] pr-[10px] pt-[5px] pb-[5px] rounded-[5px]">Unggah Data</a>
+                <a href="searchData.html" class="bg-[#0077B6] hover:bg-[#ADB5DB] pl-[10px] pr-[10px] pt-[5px] pb-[5px] rounded-[5px]">Pencarian Data</a>
             </div>
-            <div class="user">
-                <a href="#">Login</a>
-                <a href="#" id="register">Daftar</a>
-                <img src="assets/ix_user-profile-filled.png" alt="">
+            <div class="max-w-[193px] flex items-center justify-between">
+                <a href="#" class="mr-[10px]">Login</a>
+                <a href="#" id="register" class="bg-[#4CAF50] hover:bg-[#4CAF00] mr-[10px] pl-[10px] pr-[10px] pt-[5px] pb-[5px] rounded-[5px]">Daftar</a>
+                <img class="w-[40px] h-[40px] mr-[10px]" src="assets/ix_user-profile-filled.png" alt="">
             </div>
         </div>
     </header>
     <main>
-        <span class="input-title">Form Unggah Data</span>
-        <div class="forms">
-            <div class="left-form">
-                <div class="input-box">
-                    <label>Nomor Surat</label>
-                    <input type="text">
-                </div>
-                <div class="input-box">
-                    <label>Nama Perusahaan</label>
-                    <input type="text">
-                </div>
-                <div class="input-box">
-                    <label>Tanggal Pembelian</label>
-                    <input type="date">
-                </div>
-                <label class="radio-label">Apakah sudah membayar?</label>
-                <div class="option">
-                    <input type="radio" id="success" name="status" value="sudah">
-                    <label for="success">Sudah</label>
-                    <input type="radio" id="pending" name="status" value="belum">
+        <span class="text-2xl font-semibold underline decoration-solid flex justify-center mt-[27px]">Form Unggah Data</span>
+        <form action="#" method="get" class="flex flex-wrap max-w-[1142px] h-[500px] bg-[#D9D9D9] mx-auto mt-[30px] rounded-[15px] pt-[48px] pl-[45px]">
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae laboriosam eveniet quae est, facilis nemo ab nam dolore veritatis quaerat sint fugiat facere consequatur sed aut beatae. Veniam, eaque saepe.</p> -->
+            <div class="flex flex-col">
+
+                <!-- Input nomor surat -->
+                <label class="text-l font-semibold ml-[5px]">Nomor Surat</label>
+                <input class="w-[499px] h-[37px] bg-white mt-1 pl-[10px] pr-[10px] rounded-[10px] " type="text" id="nomorSurat" placeholder="Masukkan nomor surat pembelian" required>
+
+                <!-- Input nama perusahaan -->
+                <label class="mt-[14px] text-l  font-semibold ml-[5px]">Nama Perusahaan</label>
+                <input class="w-[499px] h-[37px] bg-white mt-1 pl-[10px] pr-[10px] rounded-[10px] " type="text" id="namaPerusahaan" placeholder="Masukkan nama perusahaan" required>
+
+                <!-- Input tanggal pembelian -->
+                <label class="mt-[14px] text-l  font-semibold ml-[5px]">Tanggal Pembelian</label>
+                <input class="w-[499px] h-[37px] bg-white mt-1 pl-[10px] pr-[10px] rounded-[10px] " type="date" id="tanggalBeli" required>
+
+                <!-- Input status -->
+                <label class="mt-[14px] text-l  font-semibold ml-[5px]">Apakah sudah membayar?</label>
+                <div class="mt-[5px]">
+                    <input class="mr-[16px]" type="radio" id="option" name="status" value="sudah" onclick="togglePaymentMethod()" required>
+                    <label class="mr-[21px]" for="success">Sudah</label>
+                    <input class="mr-[16px]" type="radio" id="option" name="status" value="belum" onclick="togglePaymentMethod()" required>
                     <label for="pending">Belum</label>
                 </div>
-                <div class="input-box">
-                    <label>Metode Pembayaran</label>
-                    <select name="method" id="payment-method">
-                        <option value="none"><span>--- Select One Method ---</span></option>
-                        <option value="tfBCA">Transfer via BCA</option>
-                        <option value="tfBRI">Transfer via BRI</option>
-                        <option value="tfMAN">Transfer via Mandiri</option>
-                        <option value="COD">Cash on Delivery</option>
+
+                <!-- Input metode pembayaran -->
+                <div class="flex flex-col hidden" id="paymentMethod">
+                    <label class="mt-[14px] text-l  font-semibold ml-[5px]">Metode Pembayaran</label>
+                    <select class="w-[499px] h-[37px] bg-white mt-1 pl-[10px] pr-[10px] rounded-[10px]" name="method" id="paymentMethod">
+                        <option value="none" id="rd0" onclick="paymentMethod()"><span>-- Pilih Metode Pembayaran --</span></option>
+                        <option value="tfBCA" id="rd1" onclick="paymentMethod()">Transfer via BCA</option>
+                        <option value="tfBRI" id="rd2" onclick="paymentMethod()">Transfer via BRI</option>
+                        <option value="tfMAN" id="rd3" onclick="paymentMethod()">Transfer via Mandiri</option>
+                        <option value="COD" id="rd4" onclick="paymentMethod()">Cash on Delivery</option>
                     </select>
                 </div>
             </div>
-            <div class="right-form">
-                <div class="upload-box">
-                    <img src="assets/upload.png" alt="">
-                    <input type="file" name="upload" hidden>
-                    <label for="upload">Unggah nota pembelian disini<br>(.pdf)</label>
-                </div>
-                <div class="buttons">
-                    <button class="cancel">Batal</button>
-                    <button class="upload">Unggah Data</button>
+            <div class="w-[375px] flex flex-col ml-auto mr-[73px] flex justify-center">
+                <label class="bg-white max-w-[375px] h-[358px] mb-auto flex flex-col justify-center rounded-[20px] cursor-pointer" id="dropFile">
+                    <input type="file" name="upload" id="file" hidden>
+                    <img src="assets/upload.png" alt="" class="w-[125px] mx-auto">
+                    <span class="mx-auto font-semibold">Unggah nota pembelian disini<br>(.pdf)</span>
+                </label>
+                <div class="w-[375px] mb-[19px] flex justify-between">
+                    <button type="reset" class="text-white font-semibold w-[203px] h-[50px] bg-[#E53935] mr-[17px] rounded-[30px] cursor-pointer hover:bg-[#C62828]" id="batal">Batal</button>
+                    <button type="submit" class="text-white font-semibold w-[203px] h-[50px] bg-[#4CAF50] rounded-[30px] cursor-pointer hover:bg-[#43A047]" id="unggah">Unggah Data</button>
                 </div>
             </div>
-        </div>
+        </form>
+
+        <!-- <span class="input-title">Form Unggah Data</span>
+        <form action="#" method="get" class="forms" id="inputForm">
+            <div class="left-form">
+                <div class="input-box">
+                </div>
+                <div class="input-box">
+                    
+                </div>
+                <div class="input-box">
+
+                </div>
+                
+                <div class="input-box">
+                    <label>Metode Pembayaran</label>
+                    <select name="method" id="paymentMethod">
+                        <option value="none" id="rd0" onclick="paymentMethod()"><span>-- Pilih Metode Pembayaran --</span></option>
+                        <option value="tfBCA" id="rd1" onclick="paymentMethod()">Transfer via BCA</option>
+                        <option value="tfBRI" id="rd2" onclick="paymentMethod()">Transfer via BRI</option>
+                        <option value="tfMAN" id="rd3" onclick="paymentMethod()">Transfer via Mandiri</option>
+                        <option value="COD" id="rd4" onclick="paymentMethod()">Cash on Delivery</option>
+                    </select>
+                </div>
+            </div>
+            
+        </form> -->
     </main>
+    <script src="script-input.js"></script>
 </body>
 </html>

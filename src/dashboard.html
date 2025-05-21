@@ -6,38 +6,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>SIAP - Dashboard</title>
 </head>
 <body>
-    <header>
-        <div class="top-section">
-            <img id="logo" src="assets/logo-slogan.png" alt="">
-            <div class="features">
-                <a href="#" class="button">Dashboard</a>
-                <a href="inputData.html" class="button">Unggah Data</a>
-                <a href="#" class="button">Pencarian Data</a>
+    <header class="bg-[#0077B6] h-[82px] w-auto">
+        <div class="flex justify-between items-center ml-[51px] mr-[41px] text-white">
+            <img class="w-[131px] h-auto" id="logo" src="assets/logo-slogan.png" alt="">
+            <div class="flex w-[411px] justify-between">
+                <a href="#" class="bg-[#0077B6] hover:bg-[#ADB5DB] pl-[10px] pr-[10px] pt-[5px] pb-[5px] rounded-[5px]">Dashboard</a>
+                <a href="inputData.html" class="bg-[#0077B6] hover:bg-[#ADB5DB] pl-[10px] pr-[10px] pt-[5px] pb-[5px] rounded-[5px]">Unggah Data</a>
+                <a href="#" class="bg-[#0077B6] hover:bg-[#ADB5DB] pl-[10px] pr-[10px] pt-[5px] pb-[5px] rounded-[5px]">Pencarian Data</a>
             </div>
-            <div class="user">
+            <div class="w-[193px] flex items-center justify-between">
                 <a href="#">Login</a>
-                <a href="#" id="register">Daftar</a>
-                <img src="assets/ix_user-profile-filled.png" alt="">
+                <a href="#" id="register" class="bg-[#4CAF50] hover:bg-[#4CAF00] pl-[10px] pr-[10px] pt-[5px] pb-[5px] rounded-[5px]">Daftar</a>
+                <img class="w-[40px] h-[40px]" src="assets/ix_user-profile-filled.png" alt="">
             </div>
         </div>
     </header>
     <main>
-        <div class="notif">
-            <p>
-                Selamat datang di <b>Sistem Informasi Arsip Pembelian (SIAP) !</b><br>
-                Website ini masih dalam proses pengembangan. Untuk mendukung keberlanjutan pengembangan website ini, para pengguna dipersilahkan
-                untuk memberikan kritik dan saran melalui kontak yang tertera di bawah. Terima kasih.
-            </p>
+        <!-- Notification -->
+        <div class="w-[1084px] h-[84px] bg-[#D9D9D9] flex justify-between mt-[38px] mx-auto pl-[44px] pr-[44px] rounded-[10px]">
+            <div class="my-auto">
+                Selamat datang di <b>Sistem Informasi Arsip Pembelian (SIAP) !</b>
+                <p>Website ini masih dalam proses pengembangan. Untuk mendukung keberlanjutan pengembangan website ini, para pengguna dipersilahkan
+                untuk memberikan kritik dan saran melalui kontak yang tertera di bawah. Terima kasih.</p>
+            </div>
         </div>
-        <div class="divider">
-            <hr class="line">
-            <span class="title">INFORMASI STATISTIK</span>
-            <hr class="line">
+        <!-- Divider -->
+        <div class="w-[1084px] flex mt-[38px] mx-auto">
+            <hr class="flex-1 h-[1px] my-auto">
+            <span class="ml-[29px] mr-[29px] text-2xl font-bold">INFORMASI STATISTIK</span>
+            <hr class="flex-1 h-[1px] w-[50px] my-auto">
         </div>
+        <!-- Statistics -->
         <div class="stat">
             <div class="circular"></div>
             <div class="line-graph"></div>
