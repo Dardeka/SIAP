@@ -55,20 +55,21 @@
                 <!-- Input metode pembayaran -->
                 <div class="flex flex-col hidden" id="paymentMethod">
                     <label class="mt-[14px] text-l  font-semibold ml-[5px]">Metode Pembayaran</label>
-                    <select class="w-[499px] h-[37px] bg-white mt-1 pl-[10px] pr-[10px] rounded-[10px]" name="method" id="paymentMethod">
-                        <option value="none" id="rd0" onclick="paymentMethod()"><span>-- Pilih Metode Pembayaran --</span></option>
-                        <option value="tfBCA" id="rd1" onclick="paymentMethod()">Transfer via BCA</option>
-                        <option value="tfBRI" id="rd2" onclick="paymentMethod()">Transfer via BRI</option>
-                        <option value="tfMAN" id="rd3" onclick="paymentMethod()">Transfer via Mandiri</option>
-                        <option value="COD" id="rd4" onclick="paymentMethod()">Cash on Delivery</option>
+                    <select class="w-[499px] h-[37px] bg-white mt-1 pl-[10px] pr-[10px] rounded-[10px]" name="method" id="method">
+                        <option value="none">-- Select Method --</option>
+                        <option value="BCA">Transfer via BCA</option>
+                        <option value="BRI">Transfer via BRI</option>
+                        <option value="MAN">Transfer via Mandiri</option>
+                        <option value="cash">Cash</option>
                     </select>
                 </div>
             </div>
             <div class="w-[375px] flex flex-col ml-auto mr-[73px] flex justify-center">
-                <label class="bg-white max-w-[375px] h-[358px] mb-auto flex flex-col justify-center rounded-[20px] cursor-pointer" id="dropFile">
-                    <input type="file" name="upload" id="file" hidden>
-                    <img src="assets/upload.png" alt="" class="w-[125px] mx-auto">
-                    <span class="mx-auto font-semibold">Unggah nota pembelian disini<br>(.pdf)</span>
+                <label class="bg-white max-w-[375px] h-[358px] mb-auto flex flex-col justify-center rounded-[20px] cursor-pointer" id="dropBox">
+                    <input type="file" name="upload" id="dropFile" accept="application/pdf" hidden>
+                    <img id="upImage" src="assets/upload.png" alt="" class="w-[125px] mx-auto">
+                    <span id="spanText" class="mx-auto font-semibold">Unggah nota pembelian disini<br>(.pdf)</span>
+                    <div id="preview"></div>
                 </label>
                 <div class="w-[375px] mb-[19px] flex justify-between">
                     <button type="reset" class="text-white font-semibold w-[203px] h-[50px] bg-[#E53935] mr-[17px] rounded-[30px] cursor-pointer hover:bg-[#C62828]" id="batal">Batal</button>
@@ -76,32 +77,6 @@
                 </div>
             </div>
         </form>
-
-        <!-- <span class="input-title">Form Unggah Data</span>
-        <form action="#" method="get" class="forms" id="inputForm">
-            <div class="left-form">
-                <div class="input-box">
-                </div>
-                <div class="input-box">
-                    
-                </div>
-                <div class="input-box">
-
-                </div>
-                
-                <div class="input-box">
-                    <label>Metode Pembayaran</label>
-                    <select name="method" id="paymentMethod">
-                        <option value="none" id="rd0" onclick="paymentMethod()"><span>-- Pilih Metode Pembayaran --</span></option>
-                        <option value="tfBCA" id="rd1" onclick="paymentMethod()">Transfer via BCA</option>
-                        <option value="tfBRI" id="rd2" onclick="paymentMethod()">Transfer via BRI</option>
-                        <option value="tfMAN" id="rd3" onclick="paymentMethod()">Transfer via Mandiri</option>
-                        <option value="COD" id="rd4" onclick="paymentMethod()">Cash on Delivery</option>
-                    </select>
-                </div>
-            </div>
-            
-        </form> -->
     </main>
     <script src="script-input.js"></script>
 </body>
